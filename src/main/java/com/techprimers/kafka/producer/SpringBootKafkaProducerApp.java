@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-public class SpringBootKafkaProducerApplication {
+public class SpringBootKafkaProducerApp {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(SpringBootKafkaProducerApplication.class)
+		new SpringApplicationBuilder(SpringBootKafkaProducerApp.class)
 				.sibling(FileReaderService.class).run(args);
 
 	}
