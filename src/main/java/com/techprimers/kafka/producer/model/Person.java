@@ -1,4 +1,4 @@
-package com.techprimers.kafka.springbootkafkaproducerexample.model;
+package com.techprimers.kafka.producer.model;
 
 import javax.persistence.*;
 

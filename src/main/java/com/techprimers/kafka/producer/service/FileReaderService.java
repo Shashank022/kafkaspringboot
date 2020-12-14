@@ -1,4 +1,4 @@
-package com.techprimers.kafka.springbootkafkaproducerexample.service;
+package com.techprimers.kafka.producer.service;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.techprimers.kafka.springbootkafkaproducerexample.model.Person;
+import com.techprimers.kafka.producer.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;

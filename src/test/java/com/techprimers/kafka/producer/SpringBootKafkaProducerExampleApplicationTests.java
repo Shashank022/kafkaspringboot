@@ -1,4 +1,4 @@
-package com.techprimers.kafka.springbootkafkaproducerexample;
+package com.techprimers.kafka.producer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

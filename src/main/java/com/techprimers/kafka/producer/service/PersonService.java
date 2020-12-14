@@ -1,7 +1,7 @@
-package com.techprimers.kafka.springbootkafkaproducerexample.service;
+package com.techprimers.kafka.producer.service;
 
-import com.techprimers.kafka.springbootkafkaproducerexample.model.Person;
-import com.techprimers.kafka.springbootkafkaproducerexample.repo.PersonRepository;
+import com.techprimers.kafka.producer.model.Person;
+import com.techprimers.kafka.producer.repo.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
