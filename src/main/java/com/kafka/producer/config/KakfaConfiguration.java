@@ -1,6 +1,6 @@
-package com.techprimers.kafka.producer.config;
+package com.kafka.producer.config;
 
-import com.techprimers.kafka.producer.model.User;
+import com.kafka.producer.model.User;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;

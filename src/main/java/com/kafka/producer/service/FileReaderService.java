@@ -1,17 +1,15 @@
-package com.techprimers.kafka.producer.service;
+package com.kafka.producer.service;
 
 import java.io.*;
 
-import ch.qos.logback.core.encoder.EchoEncoder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.techprimers.kafka.producer.model.Person;
+import com.kafka.producer.model.Person;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package com.techprimers.kafka.producer.model;
+package com.kafka.producer.model;
 
 import javax.persistence.*;
 
