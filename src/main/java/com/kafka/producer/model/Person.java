@@ -30,6 +30,9 @@ public class Person {
         this.timezone = timezone;
     }
 
+    public Person() {
+    }
+
     public int getId() {
         return id;
     }
