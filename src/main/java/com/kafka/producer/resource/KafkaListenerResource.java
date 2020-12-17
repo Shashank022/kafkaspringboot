@@ -39,11 +39,16 @@ public class KafkaListenerResource {
 
     @GetMapping("/publish/person/{id}")
     public String postPerson(@PathVariable("id") final Integer id) {
-        if(id != null){
-            Person person = personService.findbyId(id);
-            kafkaPersonTemplate.send(TOPIC1, new Person(id, person.getFirst_name(),person.getLast_name(),person.getEmail(),person.getGender(), person.getAddress(),
-                    person.getCountry(), person.getZipcode(),person.getTimezone()));
-        } else{
+        try{
+            if(id != null){
+                Person person = personService.findbyId(id);
+                kafkaPersonTemplate.send(TOPIC1, new Person(id, person.getFirst_name(),person.getLast_name(),person.getEmail(),person.getGender(), person.getAddress(),
+                        person.getCountry(), person.getZipcode(),person.getTimezone()));
+            } else{
+                log.error("The Person record given as Param doesn't exsists in the DB Records : {}");
+            }
+
+        }catch ( Exception e){
             log.error("The Person record given as Param doesn't exsists in the DB Records : {}");
         }
         return "Published successfully";
