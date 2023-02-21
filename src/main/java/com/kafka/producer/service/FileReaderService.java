@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.kafka.producer.model.Person;
+import com.kafka.producer.resource.KafkaProducerResource;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,9 +23,11 @@ public class FileReaderService {
 
     private static final Logger log = Logger.getLogger(FileReaderService.class);
 
-
     @Autowired
     PersonService personService;
+
+    @Autowired
+    KafkaProducerResource kafkaProducerResource;
 
     @Value("${file.resource}")
     private String fileResource;
@@ -43,9 +46,10 @@ public class FileReaderService {
                     while ((line = br.readLine()) != null) {
                         Person obj = mapper.readValue(line, Person.class);
                         personService.save(obj);
+                        kafkaProducerResource.postPerson(obj.getId());
                     }
             }catch(Exception e){
-            log.info("Exception occurered at FileReaderService:{}");
+            log.info("Exception occurred at FileReaderService:{}");
         }
     }
 }

@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("kafka")
-public class KafkaListenerResource {
+public class KafkaProducerResource {
 
     private static final Logger log = Logger.getLogger(FileReaderService.class);
 
